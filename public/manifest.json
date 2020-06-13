@@ -16,5 +16,20 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "shortcuts": [
+    {
+      "name": "Profile",
+      "short_name": "Profile",
+      "url": "/profile",
+      "icons": [{"src": "logo192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "url": "/about",
+      "icons": [{"src": "logo192.png", "sizes": "192x192"}]
+    }
+  ]
 }
