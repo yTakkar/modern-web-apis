@@ -16,6 +16,7 @@ const About = RouteLoader(React.lazy(() => import('./pages/About')))
 const Profile = RouteLoader(React.lazy(() => import('./pages/Profile')))
 const Install = RouteLoader(React.lazy(() => import('./pages/Install')))
 const ShareApi = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
+const VirateApi = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
 
         <div style={{ marginTop: 10 }}>
           <h4>Interesting Web APIs</h4>{' '}
-          <Link to='/api/share'>Share</Link>
+          <Link to='/api/share'>Share</Link>{' '}
+          <Link to='/api/vibrate'>Vibrate</Link>
         </div>
 
         <div>
@@ -41,6 +43,7 @@ function App() {
             <Route path='/profile' component={Profile} />
             <Route path='/install' component={Install} />
             <Route path='/api/share' component={ShareApi} />
+            <Route path='/api/vibrate' component={VirateApi} />
           </Switch>
         </div>
 
