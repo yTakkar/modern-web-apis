@@ -17,6 +17,7 @@ const Profile = RouteLoader(React.lazy(() => import('./pages/Profile')))
 const Install = RouteLoader(React.lazy(() => import('./pages/Install')))
 const ShareApi = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
 const VirateApi = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
+const MediaSessionApi = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
         <div style={{ marginTop: 10 }}>
           <h4>Interesting Web APIs</h4>{' '}
           <Link to='/api/share'>Share</Link>{' '}
-          <Link to='/api/vibrate'>Vibrate</Link>
+          <Link to='/api/vibrate'>Vibrate</Link>{' '}
+          <Link to='/api/media-session'>MediaSession</Link>{' '}
         </div>
 
         <div>
@@ -44,6 +46,7 @@ function App() {
             <Route path='/install' component={Install} />
             <Route path='/api/share' component={ShareApi} />
             <Route path='/api/vibrate' component={VirateApi} />
+            <Route path='/api/media-session' component={MediaSessionApi} />
           </Switch>
         </div>
 
