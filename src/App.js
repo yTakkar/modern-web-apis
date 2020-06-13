@@ -14,44 +14,24 @@ const RouteLoader = Component => props => {
 const Home = RouteLoader(React.lazy(() => import('./pages/Home')))
 const About = RouteLoader(React.lazy(() => import('./pages/About')))
 const Profile = RouteLoader(React.lazy(() => import('./pages/Profile')))
+const Install = RouteLoader(React.lazy(() => import('./pages/Install')))
+const ShareApi = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
 
 function App() {
-  const installPrompt = useRef(undefined)
-
-  useEffect(() => {
-    window.addEventListener('beforeinstallprompt', e => {
-      e.preventDefault();
-      installPrompt.current = e;
-    })
-  })
-
-  const installApp = () => {
-    if (!installPrompt.current) {
-      return;
-    }
-
-    installPrompt.current.prompt();
-    installPrompt.current.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
-    });
-  }
-  
   return (
     <div className="App">
       <Router>
         <div>
+          <h4>Pages</h4>{' '}
+          <Link to='/install' >Install</Link>{' '}
           <Link to='/' >Home</Link>{' '}
           <Link to='/about' >About</Link>{' '}
           <Link to='/profile' >Profile</Link>
         </div>
 
-        <div>
-          <br/>
-          <button onClick={installApp} >Install app?</button>
+        <div style={{ marginTop: 10 }}>
+          <h4>Interesting Web APIs</h4>{' '}
+          <Link to='/api/share'>Share</Link>
         </div>
 
         <div>
@@ -59,10 +39,12 @@ function App() {
             <Route path='/' exact component={Home}  />
             <Route path='/about' exact component={About}  />
             <Route path='/profile' component={Profile} />
+            <Route path='/install' component={Install} />
+            <Route path='/api/share' component={ShareApi} />
           </Switch>
         </div>
 
-        <img alt='ddd' src={logo192} />
+        {/* <img alt='ddd' src={logo192} /> */}
         {/* <img alt='ddd' src={logo512} /> */}
       </Router>
     </div>
