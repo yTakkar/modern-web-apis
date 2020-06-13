@@ -84,7 +84,7 @@ const MediaSession = props => {
     navigator.mediaSession.setPositionState({
       duration: audioRef.current.duration,
       playbackRate: audioRef.current.playbackRate,
-      position: audioRef.current.position
+      position: audioRef.current.currentTime
     });
   }
 
@@ -148,7 +148,9 @@ const MediaSession = props => {
     <div>
       <h3>MediaSession API</h3>
       <button onClick={playAudio} >Play audio</button>
-      <audio key={audioIndex} ref={audioRef} src={currentSong.src} />
+      <audio key={audioIndex} ref={audioRef} controls >
+        <source src={currentSong.src} type="audio/mp3" />
+      </audio>
     </div>
   )
 }
