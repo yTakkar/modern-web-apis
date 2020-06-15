@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 const FullScreen = props => {
   const [isFullscreenView, toggleFullscreenView] = useState(false)
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const onChange = e => {
@@ -16,8 +17,8 @@ const FullScreen = props => {
   }, [isFullscreenView])
 
   const goFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    if (!isFullscreenView) {
+      imgRef.current.requestFullscreen()
     } else {
       document.exitFullscreen();
     }
@@ -26,7 +27,10 @@ const FullScreen = props => {
   return (
     <div>
       <h3>FullScreen API</h3>
-      <button onClick={goFullscreen} >{isFullscreenView ? 'Exit FullScreen' : 'Go FullScreen'}</button>
+      <img onClick={goFullscreen} ref={imgRef} src='/taj-mahal-1.jpg' alt='TajMahal' width='350' style={{
+        cursor: isFullscreenView ? 'zoom-out' : 'zoom-in',
+      }} />
+      <br/>
     </div>
   )
 }
