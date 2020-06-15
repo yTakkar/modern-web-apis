@@ -16,10 +16,11 @@ const About = RouteLoader(React.lazy(() => import('./pages/About')))
 const Profile = RouteLoader(React.lazy(() => import('./pages/Profile')))
 const Install = RouteLoader(React.lazy(() => import('./pages/Install')))
 
-const ShareApi = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
-const VirateApi = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
-const MediaSessionApi = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
-const FullScreenApi = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen')))
+const Share = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
+const Virate = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
+const MediaSession = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
+const FullScreen = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen')))
+const ScreenNoSleep = RouteLoader(React.lazy(() => import('./pages/apis/NoSleep')))
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Link to='/api/vibrate'>Vibrate</Link>{' '}
           <Link to='/api/media-session'>MediaSession</Link>{' '}
           <Link to='/api/fullscreen'>FullScreen</Link>{' '}
+          <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>{' '}
         </div>
 
         <div>
@@ -48,10 +50,11 @@ function App() {
             <Route path='/profile' component={Profile} />
             <Route path='/install' component={Install} />
 
-            <Route path='/api/share' component={ShareApi} />
-            <Route path='/api/vibrate' component={VirateApi} />
-            <Route path='/api/media-session' component={MediaSessionApi} />
-            <Route path='/api/fullscreen' component={FullScreenApi} />
+            <Route path='/api/share' component={Share} />
+            <Route path='/api/vibrate' component={Virate} />
+            <Route path='/api/media-session' component={MediaSession} />
+            <Route path='/api/fullscreen' component={FullScreen} />
+            <Route path='/api/screen-no-sleep' component={ScreenNoSleep} />
           </Switch>
         </div>
 

@@ -30,6 +30,9 @@ const FullScreen = props => {
       <img onClick={goFullscreen} ref={imgRef} src='/taj-mahal-1.jpg' alt='TajMahal' width='350' style={{
         cursor: isFullscreenView ? 'zoom-out' : 'zoom-in',
       }} />
+      <div>
+        <i>Click on the image to toggle the above image in fullscreen mode.</i>
+      </div>
       <br/>
     </div>
   )
