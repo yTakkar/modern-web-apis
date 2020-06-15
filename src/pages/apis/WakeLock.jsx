@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react'
 const WakeLockApi = props => {
   const wakeLock = useRef(null)
   const [wakeLockEnabled, setWakeLockEnabled] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
   const enableWakeLock = async () => {
     if ('WakeLock' in window && 'request' in window.WakeLock) {
@@ -11,11 +12,11 @@ const WakeLockApi = props => {
         console.log('Screen Wake Lock is active');
         setWakeLockEnabled(true)
       } catch (err) {
-        console.error(`${err.name}, ${err.message}`);
+        setErrorMessage(`${err.name}, ${err.message}`);
         setWakeLockEnabled(false)
       }
     } else {
-      console.log('WakeLock is not supported!')
+      setErrorMessage('WakeLock API is not supported in your browser!')
     }
   }
 
@@ -45,6 +46,10 @@ const WakeLockApi = props => {
       <i>
         {wakeLockEnabled ? "Your device won't sleep now" : null}
       </i>
+
+      <div>
+        {errorMessage && `Error: ${errorMessage}`}
+      </div>
     </div>
   )
 }
