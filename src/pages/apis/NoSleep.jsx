@@ -6,7 +6,7 @@ const noSleep = new NoSleep();
 const ScreenNoSleep = props => {
   const [wakeLockEnabled, toggleWakeLock] = useState(false)
 
-  const toggleSleep = () => {
+  const toggleLock = () => {
     if (!wakeLockEnabled) {
       noSleep.enable();
       toggleWakeLock(true)
@@ -19,7 +19,7 @@ const ScreenNoSleep = props => {
   return (
     <div>
       <h3>Screen lock/unlock functionality with NoSleep.js</h3>
-      <button onClick={toggleSleep} >
+      <button onClick={toggleLock} >
         {wakeLockEnabled ? 'Disable wake lock' : 'Enable wake lock'}
       </button>
 

@@ -16,3 +16,7 @@ code {
 h4 {
   margin: 0;
 }
+
+.api-links a {
+  display: block;
+}

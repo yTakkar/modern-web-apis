@@ -11,9 +11,9 @@ const RouteLoader = Component => props => {
   );
 };
 
-const Home = RouteLoader(React.lazy(() => import('./pages/Home')))
-const About = RouteLoader(React.lazy(() => import('./pages/About')))
-const Profile = RouteLoader(React.lazy(() => import('./pages/Profile')))
+const Home = RouteLoader(React.lazy(() => import('./pages/pages/Home')))
+const About = RouteLoader(React.lazy(() => import('./pages/pages/About')))
+const Profile = RouteLoader(React.lazy(() => import('./pages/pages/Profile')))
 const Install = RouteLoader(React.lazy(() => import('./pages/Install')))
 
 const Share = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
@@ -21,6 +21,7 @@ const Virate = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
 const MediaSession = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
 const FullScreen = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen')))
 const ScreenNoSleep = RouteLoader(React.lazy(() => import('./pages/apis/NoSleep')))
+const WakeLock = RouteLoader(React.lazy(() => import('./pages/apis/WakeLock')))
 
 function App() {
   return (
@@ -34,13 +35,14 @@ function App() {
           <Link to='/profile' >Profile</Link>
         </div>
 
-        <div style={{ marginTop: 10 }}>
-          <h4>Interesting Web APIs</h4>{' '}
-          <Link to='/api/share'>Share</Link>{' '}
-          <Link to='/api/vibrate'>Vibrate</Link>{' '}
-          <Link to='/api/media-session'>MediaSession</Link>{' '}
-          <Link to='/api/fullscreen'>FullScreen</Link>{' '}
-          <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>{' '}
+        <div className='api-links' style={{ marginTop: 10 }}>
+          <h4>Interesting Web APIs</h4>
+          <Link to='/api/share'>Share</Link>
+          <Link to='/api/vibrate'>Vibrate</Link>
+          <Link to='/api/media-session'>MediaSession</Link>
+          <Link to='/api/fullscreen'>FullScreen</Link>
+          <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>
+          <Link to='/api/wakelock'>WakeLock</Link>
         </div>
 
         <div>
@@ -55,6 +57,7 @@ function App() {
             <Route path='/api/media-session' component={MediaSession} />
             <Route path='/api/fullscreen' component={FullScreen} />
             <Route path='/api/screen-no-sleep' component={ScreenNoSleep} />
+            <Route path='/api/wakelock' component={WakeLock} />
           </Switch>
         </div>
 
