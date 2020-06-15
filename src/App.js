@@ -14,8 +14,8 @@ const RouteLoader = Component => props => {
 const Home = RouteLoader(React.lazy(() => import('./pages/pages/Home')))
 const About = RouteLoader(React.lazy(() => import('./pages/pages/About')))
 const Profile = RouteLoader(React.lazy(() => import('./pages/pages/Profile')))
-const Install = RouteLoader(React.lazy(() => import('./pages/Install')))
 
+const Install = RouteLoader(React.lazy(() => import('./pages/apis/Install')))
 const Share = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
 const Virate = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
 const MediaSession = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
@@ -29,7 +29,6 @@ function App() {
       <Router>
         <div>
           <h4>Pages</h4>{' '}
-          <Link to='/install' >Install</Link>{' '}
           <Link to='/' >Home</Link>{' '}
           <Link to='/about' >About</Link>{' '}
           <Link to='/profile' >Profile</Link>
@@ -37,6 +36,7 @@ function App() {
 
         <div className='api-links' style={{ marginTop: 10 }}>
           <h4>Interesting Web APIs</h4>
+          <Link to='/install' >Install</Link>
           <Link to='/api/share'>Share</Link>
           <Link to='/api/vibrate'>Vibrate</Link>
           <Link to='/api/media-session'>MediaSession</Link>
