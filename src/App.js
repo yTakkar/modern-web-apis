@@ -22,6 +22,7 @@ const MediaSession = RouteLoader(React.lazy(() => import('./pages/apis/MediaSess
 const FullScreen = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen')))
 const ScreenNoSleep = RouteLoader(React.lazy(() => import('./pages/apis/NoSleep')))
 const WakeLock = RouteLoader(React.lazy(() => import('./pages/apis/WakeLock')))
+const Notifications = RouteLoader(React.lazy(() => import('./pages/apis/Notifications')))
 
 function App() {
   return (
@@ -36,13 +37,14 @@ function App() {
 
         <div className='api-links' style={{ marginTop: 10 }}>
           <h4>Interesting Web APIs</h4>
-          <Link to='/install' >Install</Link>
+          <Link to='/api/install' >Install</Link>
           <Link to='/api/share'>Share</Link>
           <Link to='/api/vibrate'>Vibrate</Link>
           <Link to='/api/media-session'>MediaSession</Link>
           <Link to='/api/fullscreen'>FullScreen</Link>
           <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>
           <Link to='/api/wakelock'>WakeLock</Link>
+          <Link to='/api/notifications'>Notifications</Link>
         </div>
 
         <div>
@@ -50,14 +52,15 @@ function App() {
             <Route path='/' exact component={Home}  />
             <Route path='/about' exact component={About}  />
             <Route path='/profile' component={Profile} />
-            <Route path='/install' component={Install} />
 
+            <Route path='/api/install' component={Install} />
             <Route path='/api/share' component={Share} />
             <Route path='/api/vibrate' component={Virate} />
             <Route path='/api/media-session' component={MediaSession} />
             <Route path='/api/fullscreen' component={FullScreen} />
             <Route path='/api/screen-no-sleep' component={ScreenNoSleep} />
             <Route path='/api/wakelock' component={WakeLock} />
+            <Route path='/api/notifications' component={Notifications} />
           </Switch>
         </div>
 
