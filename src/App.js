@@ -24,6 +24,7 @@ const ScreenNoSleep = RouteLoader(React.lazy(() => import('./pages/apis/NoSleep'
 const WakeLock = RouteLoader(React.lazy(() => import('./pages/apis/WakeLock')))
 const Notifications = RouteLoader(React.lazy(() => import('./pages/apis/Notifications')))
 const TextFragments = RouteLoader(React.lazy(() => import('./pages/apis/TextFragments')))
+const IdleDetector = RouteLoader(React.lazy(() => import('./pages/apis/IdleDetector')))
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Link to='/api/wakelock'>WakeLock</Link>
           <Link to='/api/notifications'>Notifications</Link>
           <Link to='/api/text-fragments'>Text Fragments</Link>
+          <Link to='/api/idle-detector'>Idle Detector</Link>
         </div>
 
         <div>
@@ -64,6 +66,7 @@ function App() {
             <Route path='/api/wakelock' component={WakeLock} />
             <Route path='/api/notifications' component={Notifications} />
             <Route path='/api/text-fragments' component={TextFragments} />
+            <Route path='/api/idle-detector' component={IdleDetector} />
           </Switch>
         </div>
 
