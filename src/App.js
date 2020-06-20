@@ -23,6 +23,7 @@ const FullScreen = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen'
 const ScreenNoSleep = RouteLoader(React.lazy(() => import('./pages/apis/NoSleep')))
 const WakeLock = RouteLoader(React.lazy(() => import('./pages/apis/WakeLock')))
 const Notifications = RouteLoader(React.lazy(() => import('./pages/apis/Notifications')))
+const TextFragments = RouteLoader(React.lazy(() => import('./pages/apis/TextFragments')))
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>
           <Link to='/api/wakelock'>WakeLock</Link>
           <Link to='/api/notifications'>Notifications</Link>
+          <Link to='/api/text-fragments'>Text Fragments</Link>
         </div>
 
         <div>
@@ -61,6 +63,7 @@ function App() {
             <Route path='/api/screen-no-sleep' component={ScreenNoSleep} />
             <Route path='/api/wakelock' component={WakeLock} />
             <Route path='/api/notifications' component={Notifications} />
+            <Route path='/api/text-fragments' component={TextFragments} />
           </Switch>
         </div>
 
