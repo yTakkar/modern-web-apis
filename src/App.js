@@ -26,6 +26,7 @@ const Notifications = RouteLoader(React.lazy(() => import('./pages/apis/Notifica
 const TextFragments = RouteLoader(React.lazy(() => import('./pages/apis/TextFragments')))
 const IdleDetector = RouteLoader(React.lazy(() => import('./pages/apis/IdleDetector')))
 const MediaCapture = RouteLoader(React.lazy(() => import('./pages/apis/MediaCapture')))
+const Contacts = RouteLoader(React.lazy(() => import('./pages/apis/Contacts')))
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Link to='/api/text-fragments'>Text Fragments</Link>
           <Link to='/api/idle-detector'>Idle Detector</Link>
           <Link to='/api/media-capture'>Media Capture</Link>
+          <Link to='/api/contacts'>Contacts</Link>
         </div>
 
         <div>
@@ -70,6 +72,7 @@ function App() {
             <Route path='/api/text-fragments' component={TextFragments} />
             <Route path='/api/idle-detector' component={IdleDetector} />
             <Route path='/api/media-capture' component={MediaCapture} />
+            <Route path='/api/contacts' component={Contacts} />
           </Switch>
         </div>
 
