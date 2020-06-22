@@ -10,7 +10,7 @@ const defaultAudioOptions = {
   volume: 1,
 }
 
-const MediaDevices = props => {
+const UserMedia = props => {
   const videoRef = useRef(null)  
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -175,4 +175,4 @@ const MediaDevices = props => {
   )
 }
 
-export default MediaDevices;
+export default UserMedia;

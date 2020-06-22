@@ -25,7 +25,7 @@ const WakeLock = RouteLoader(React.lazy(() => import('./pages/apis/WakeLock')))
 const Notifications = RouteLoader(React.lazy(() => import('./pages/apis/Notifications')))
 const TextFragments = RouteLoader(React.lazy(() => import('./pages/apis/TextFragments')))
 const IdleDetector = RouteLoader(React.lazy(() => import('./pages/apis/IdleDetector')))
-const MediaCapture = RouteLoader(React.lazy(() => import('./pages/apis/MediaCapture')))
+const UserMedia = RouteLoader(React.lazy(() => import('./pages/apis/UserMedia')))
 const Contacts = RouteLoader(React.lazy(() => import('./pages/apis/Contacts')))
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
           <Link to='/api/notifications'>Notifications</Link>
           <Link to='/api/text-fragments'>Text Fragments</Link>
           <Link to='/api/idle-detector'>Idle Detector</Link>
-          <Link to='/api/media-capture'>Media Capture</Link>
+          <Link to='/api/user-media'>User Media</Link>
           <Link to='/api/contacts'>Contacts</Link>
         </div>
 
@@ -71,7 +71,7 @@ function App() {
             <Route path='/api/notifications' component={Notifications} />
             <Route path='/api/text-fragments' component={TextFragments} />
             <Route path='/api/idle-detector' component={IdleDetector} />
-            <Route path='/api/media-capture' component={MediaCapture} />
+            <Route path='/api/user-media' component={UserMedia} />
             <Route path='/api/contacts' component={Contacts} />
           </Switch>
         </div>
