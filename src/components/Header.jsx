@@ -27,6 +27,7 @@ const Header = () => {
         <Link to='/api/screen-media'>Screen Media</Link>
         <Link to='/api/contacts'>Contacts</Link>
         <Link to='/api/clipboard'>Clipboard</Link>
+        <Link to='/api/payment-request'>PaymentRequest</Link>
       </div>
     </>
   )

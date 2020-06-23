@@ -22,6 +22,7 @@ const UserMedia = RouteLoader(React.lazy(() => import('./pages/apis/UserMedia'))
 const ScreenMedia = RouteLoader(React.lazy(() => import('./pages/apis/ScreenMedia')))
 const Contacts = RouteLoader(React.lazy(() => import('./pages/apis/Contacts')))
 const Clipboard = RouteLoader(React.lazy(() => import('./pages/apis/Clipboard')))
+const PaymentRequest = RouteLoader(React.lazy(() => import('./pages/apis/PaymentRequest')))
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route path='/api/screen-media' component={ScreenMedia} />
             <Route path='/api/contacts' component={Contacts} />
             <Route path='/api/clipboard' component={Clipboard} />
+            <Route path='/api/payment-request' component={PaymentRequest} />
             <Route component={Home} />
           </Switch>
         </div>
