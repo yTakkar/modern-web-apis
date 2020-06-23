@@ -118,9 +118,9 @@ const PaymentRequestApi = props => {
         ? <i>Payment successfull</i> 
         : paymentState === 'fail' ? <i>Payment failed</i> : null}
 
-        <pre>
-          {JSON.stringify(paymentResponse, undefined, 2)}
-        </pre>
+      {paymentState === 'success' && <pre>
+        {JSON.stringify(paymentResponse, undefined, 2)}
+      </pre>}
 
       <div><b>{errorMessage}</b></div>
     </div>
