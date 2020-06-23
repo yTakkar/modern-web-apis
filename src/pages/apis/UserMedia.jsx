@@ -17,7 +17,7 @@ const UserMedia = props => {
   const [videoOptions, setVideoOptions] = useState(defaultVideoOptions)
   const [audioOptions, setAudioOptions] = useState(defaultAudioOptions)
 
-  const [videoStream, setVideoStream] = useState(null)
+  const [mediaStream, setMediaStream] = useState(null)
  
   const getVideoConstraints = () => {
     return {
@@ -43,7 +43,7 @@ const UserMedia = props => {
         videoRef.current.srcObject = mediaStream;               
         
         if (mediaStream) {
-          setVideoStream(mediaStream)
+          setMediaStream(mediaStream)
         }
         
         videoRef.current.onloadedmetadata = () => {
@@ -58,24 +58,28 @@ const UserMedia = props => {
   }
 
   const getVideoTrack = () => {
-    const tracks = videoStream?.getVideoTracks() || [];
+    const tracks = mediaStream?.getVideoTracks() || [];
     return tracks[0]
   }
 
   const getAudioTrack = () => {
-    const tracks = videoStream?.getAudioTracks() || [];
+    const tracks = mediaStream?.getAudioTracks() || [];
     return tracks[0]
   }
 
   const stopLivestream = () => {
-    const track = getVideoTrack()
-    if (track) {
-      track.stop();
-      videoRef.current.srcObject = null;
-      setVideoStream(null)
-      setAudioOptions(defaultAudioOptions)
-      setVideoOptions(defaultVideoOptions)
+    const videoTrack = getVideoTrack()
+    const audioTrack = getAudioTrack()
+    if (videoTrack) {
+      videoTrack.stop();
     }
+    if (audioTrack) {
+      audioTrack.stop();
+    }
+    videoRef.current.srcObject = null;
+    setMediaStream(null)
+    setAudioOptions(defaultAudioOptions)
+    setVideoOptions(defaultVideoOptions)
   }
 
   useEffect(() => {
@@ -160,7 +164,7 @@ const UserMedia = props => {
       </select>
 
       <br/><br/>
-      {!videoStream 
+      {!mediaStream 
         ? <button onClick={startLivestream} >Start Livestream</button> 
         : <button onClick={stopLivestream} >Stop Livestream</button>
       }
