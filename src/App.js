@@ -28,6 +28,7 @@ const IdleDetector = RouteLoader(React.lazy(() => import('./pages/apis/IdleDetec
 const UserMedia = RouteLoader(React.lazy(() => import('./pages/apis/UserMedia')))
 const ScreenMedia = RouteLoader(React.lazy(() => import('./pages/apis/ScreenMedia')))
 const Contacts = RouteLoader(React.lazy(() => import('./pages/apis/Contacts')))
+const Clipboard = RouteLoader(React.lazy(() => import('./pages/apis/Clipboard')))
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Link to='/api/user-media'>User Media</Link>
           <Link to='/api/screen-media'>Screen Media</Link>
           <Link to='/api/contacts'>Contacts</Link>
+          <Link to='/api/clipboard'>Clipboard</Link>
         </div>
 
         <div>
@@ -76,6 +78,7 @@ function App() {
             <Route path='/api/user-media' component={UserMedia} />
             <Route path='/api/screen-media' component={ScreenMedia} />
             <Route path='/api/contacts' component={Contacts} />
+            <Route path='/api/clipboard' component={Clipboard} />
           </Switch>
         </div>
 
