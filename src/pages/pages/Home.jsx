@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../../components/Header'
 
 const Home = props => {
   return (
     <div>
-      <h3>This is home page!</h3>
+      <Header/>
     </div>
   )
 }

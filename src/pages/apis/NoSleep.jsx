@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import NoSleep from 'nosleep.js'
+import Back from '../../components/Back';
 
 const noSleep = new NoSleep();
 
@@ -18,6 +19,8 @@ const ScreenNoSleep = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Screen lock/unlock functionality with NoSleep.js</h3>
       <button onClick={toggleLock} >
         {wakeLockEnabled ? 'Disable wake lock' : 'Enable wake lock'}

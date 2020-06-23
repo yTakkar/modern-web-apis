@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Back from '../../components/Back'
 
 const Notifications = props => {
   const [errorMessage, setErrorMessage] = useState('')
@@ -31,6 +32,8 @@ const Notifications = props => {
   
   return (
     <div>
+      <Back/>
+
       <h3>Notifications API</h3>
       <button onClick={showNotification} >Show notification</button>
 

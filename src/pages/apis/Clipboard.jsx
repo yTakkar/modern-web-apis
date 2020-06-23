@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Back from '../../components/Back';
 
 const Clipboard = props => {
   const copyValue = 'quick brown fox jumps over the lazy dog';
@@ -35,6 +36,8 @@ const Clipboard = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Clipboard API</h3>
 
       <div><i>Copy value: {copyValue}</i></div>

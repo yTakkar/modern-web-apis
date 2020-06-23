@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Back from '../../components/Back'
 
 const IdleDetectorApi = props => {
   const [idleState, setIdleState] = useState({})
@@ -36,6 +37,8 @@ const IdleDetectorApi = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Idle Detector</h3>
       <div>The API can help use detect whether user is idle or the screen is locked.</div>
       <br/>

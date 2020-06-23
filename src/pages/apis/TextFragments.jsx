@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
+import Back from '../../components/Back';
 
 const TextFragments = props => {
   return (
     <div>
+      <Back/>
+
       <h3>Text Fragments</h3>
       <div>When you click on below links to navigate, a piece of text will be highlighted.</div><br/>
       <a 

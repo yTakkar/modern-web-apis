@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
+import Back from '../../components/Back'
 
 const WakeLockApi = props => {
   const wakeLock = useRef(null)
@@ -36,6 +37,8 @@ const WakeLockApi = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Wake lock API</h3>
 
       {wakeLockEnabled 

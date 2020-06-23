@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import Back from '../../components/Back';
 
 const getAwesomePlaylist = () => {
   const BASE_URL = 'https://storage.googleapis.com/media-session/';
@@ -146,6 +147,8 @@ const MediaSession = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>MediaSession API</h3>
       <button onClick={playAudio} >Play audio</button>
       <audio key={audioIndex} ref={audioRef} controls >

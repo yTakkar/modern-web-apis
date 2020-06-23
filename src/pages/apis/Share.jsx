@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Back from '../../components/Back'
 
 const ShareApi = props => {
   const [uploadedFiles, setUploadedFiles] = useState([])
@@ -67,6 +68,8 @@ const ShareApi = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Share API</h3>
 
       <h4>Share URL</h4>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import Back from '../../components/Back';
 
 const FullScreen = props => {
   const [isFullscreenView, toggleFullscreenView] = useState(false)
@@ -26,6 +27,8 @@ const FullScreen = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>FullScreen API</h3>
       <img onClick={goFullscreen} ref={imgRef} src='/taj-mahal-1.jpg' alt='TajMahal' width='350' style={{
         cursor: isFullscreenView ? 'zoom-out' : 'zoom-in',

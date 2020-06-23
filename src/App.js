@@ -1,15 +1,8 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import RouteLoader from './components/RouteLoader';
 import logo512 from './images/logo512.png'
 import logo192 from './images/logo192.png'
-
-const RouteLoader = Component => props => {
-  return (
-    <Suspense fallback='Loading..'>
-      <Component {...props} />
-    </Suspense>
-  );
-};
 
 const Home = RouteLoader(React.lazy(() => import('./pages/pages/Home')))
 const About = RouteLoader(React.lazy(() => import('./pages/pages/About')))
@@ -35,31 +28,6 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <h4>Pages</h4>{' '}
-          <Link to='/' >Home</Link>{' '}
-          <Link to='/about' >About</Link>{' '}
-          <Link to='/profile' >Profile</Link>
-        </div>
-
-        <div className='api-links' style={{ marginTop: 10 }}>
-          <h4>Interesting Web APIs</h4>
-          <Link to='/api/install' >Install</Link>
-          <Link to='/api/share'>Share</Link>
-          <Link to='/api/vibrate'>Vibrate</Link>
-          <Link to='/api/media-session'>MediaSession</Link>
-          <Link to='/api/fullscreen'>FullScreen</Link>
-          <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>
-          <Link to='/api/wakelock'>WakeLock</Link>
-          <Link to='/api/notifications'>Notifications</Link>
-          <Link to='/api/text-fragments'>Text Fragments</Link>
-          <Link to='/api/idle-detector'>Idle Detector</Link>
-          <Link to='/api/user-media'>User Media</Link>
-          <Link to='/api/screen-media'>Screen Media</Link>
-          <Link to='/api/contacts'>Contacts</Link>
-          <Link to='/api/clipboard'>Clipboard</Link>
-        </div>
-
-        <div>
           <Switch>
             <Route path='/' exact component={Home}  />
             <Route path='/about' exact component={About}  />
@@ -79,6 +47,7 @@ function App() {
             <Route path='/api/screen-media' component={ScreenMedia} />
             <Route path='/api/contacts' component={Contacts} />
             <Route path='/api/clipboard' component={Clipboard} />
+            <Route component={Home} />
           </Switch>
         </div>
 

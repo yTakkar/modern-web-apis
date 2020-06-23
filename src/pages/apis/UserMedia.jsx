@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
+import Back from '../../components/Back'
 
 const defaultVideoOptions = {
   width: 360,
@@ -129,6 +130,8 @@ const UserMedia = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>We can use MediaDevice's getUserMedia API to capture user's media.</h3>
 
       <b>Video settings:</b>&nbsp;&nbsp;

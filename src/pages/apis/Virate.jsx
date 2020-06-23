@@ -1,4 +1,5 @@
 import React from 'react'
+import Back from '../../components/Back';
 
 const Vibrate = props => {
   const vibrate = () => {
@@ -10,6 +11,8 @@ const Vibrate = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Vibration API</h3>
 
       <button onClick={vibrate} >Vibrate</button>

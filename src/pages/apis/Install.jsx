@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
+import Back from '../../components/Back';
 
 const Install = props => {
   const [show, toggle] = useState(false);
@@ -34,6 +35,8 @@ const Install = props => {
   
   return (
     <div>
+      <Back/>
+
       <br/>
      {show ? 
       <button onClick={showPrompt} >Install app</button> 

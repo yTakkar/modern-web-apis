@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Back from '../../components/Back'
 
 const Contacts = props => {
   const [contacts, setContacts] = useState([])
@@ -31,6 +32,8 @@ const Contacts = props => {
 
   return (
     <div>
+      <Back/>
+
       <h3>Contacts API</h3>
       <button onClick={fetchContacts} >Fetch contacts</button>
       <br/>

@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react'
+import Back from '../../components/Back';
+import { Link } from 'react-router-dom';
 
 const ScreenMedia = props => {
   const [errorMessage, setErrorMessage] = useState('')
@@ -58,7 +60,12 @@ const ScreenMedia = props => {
 
   return (
     <div>
-      <h3>We can use MediaDevice's getDisplayMedia API to capture user's screen media. You can use getUserMedia's constraints/options also.</h3>
+      <Back/>
+      
+      <h3>We can use MediaDevice's getDisplayMedia API to capture user's screen media.</h3>
+      <div>You can use getUserMedia's constraints/options also. Have a look at <Link to='/api/user-media'>UserMedia</Link> for in-detail demo.</div>
+      <br/>
+
       {!!mediaStream 
         ? <button onClick={stopScreenShare}>Stop screen share</button> 
         : <button onClick={startScreenShare}>Start screen share</button>
