@@ -6,7 +6,9 @@ const Profile = props => {
     <div>
       <Back/>
 
-      <h3>This is profile page!</h3>
+      <h3>The page was created specifically for app shortcuts.</h3>
+
+      <img src='/shortcuts.jpg' alt='Shortcuts' width='360' />
     </div>
   )
 }
