@@ -2,7 +2,6 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 3001
 const subscriptions = require('./models/subscription')
 const webPush = require('web-push')
 
@@ -106,4 +105,4 @@ app.post('/api/trigger-push-notification', async (req, res) => {
     })
 })
 
-app.listen(port, () => console.log(`App running...`))
+app.listen(process.env.PORT || 3001, () => console.log(`App running...`))
