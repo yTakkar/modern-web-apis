@@ -17,13 +17,18 @@ const Profile = props => {
     <div>
       <Back/>
       <h3>Share Target API</h3>
-      <div>We can use this API to receive 'shares'</div>
+      <div>We can use this API to receive 'shares'. Goto any page on Chrome and tap on Share option.</div>
 
       <br/>
 
-      <div>Title shared: {title}</div>
-      <div>Description shared: {description}</div>
-      <div>URL shared: {url}</div>
+      {(title || description || url) ? 
+        <div>
+          <div>Title shared: {title}</div>
+          <div>Description shared: {description}</div>
+          <div>URL shared: {url}</div>
+        </div>
+        : <img src='/share-target.jpg' alt='Shortcuts' width='360' />
+      }
 
     </div>
   )
