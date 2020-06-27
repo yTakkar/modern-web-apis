@@ -9,6 +9,7 @@ const About = RouteLoader(React.lazy(() => import('./pages/others/About')))
 const Profile = RouteLoader(React.lazy(() => import('./pages/others/Profile')))
 
 const Install = RouteLoader(React.lazy(() => import('./pages/apis/Install')))
+const Battery = RouteLoader(React.lazy(() => import('./pages/apis/Battery')))
 const Share = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
 const Virate = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
 const MediaSession = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
@@ -53,6 +54,7 @@ function App() {
             <Route path='/api/clipboard' component={Clipboard} />
             <Route path='/api/payment-request' component={PaymentRequest} />
             <Route path='/api/call' component={Call} />
+            <Route path='/api/battery' component={Battery} />
             <Route component={Home} />
           </Switch>
         </div>

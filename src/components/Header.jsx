@@ -30,6 +30,7 @@ const Header = () => {
         <Link to='/api/clipboard'>Clipboard</Link>
         <Link to='/api/payment-request'>PaymentRequest</Link>
         <Link to='/api/call'>Call</Link>
+        <Link to='/api/battery' >Battery</Link>
       </div>
     </>
   )
