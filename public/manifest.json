@@ -23,13 +23,15 @@
       "name": "Profile",
       "short_name": "Profile",
       "url": "/profile",
-      "icons": [{"src": "logo192.png", "sizes": "192x192"}]
+      "icons": [{"src": "logo192.png", "sizes": "192x192"}],
+      "purpose": "any maskable"
     },
     {
       "name": "About",
       "short_name": "About",
       "url": "/about",
-      "icons": [{"src": "logo192.png", "sizes": "192x192"}]
+      "icons": [{"src": "logo192.png", "sizes": "192x192"}],
+      "purpose": "any maskable"
     }
   ]
 }
