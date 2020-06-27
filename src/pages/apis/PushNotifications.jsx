@@ -10,7 +10,7 @@ import cookie from 'js-cookie'
 
 const PUBLIC_KEY = 'BBDrHKLJfxVxcNKygxQzENzEb4mUPsuZrffu0EV6Hg_jyU5oR7LdG4bcrjHq7aWA5v8emlZpTMOIG68Wy5s8ofY'
 
-const API_DOMAIN = process.env === 'production' ? 'https://awesome-web-apis-server.herokuapp.com' : 'http://localhost:3001'
+const API_DOMAIN = process.env.NODE_ENV === 'production' ? 'https://awesome-web-apis-server.herokuapp.com' : 'http://localhost:3001'
 
 const PushNotifications = props => {
   const [errorMessage, setErrorMessage] = useState('')
