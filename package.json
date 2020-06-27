@@ -1,5 +1,5 @@
 {
-  "name": "cra-workbox",
+  "name": "awesome-web-apis",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "rename": "cp ./build/index.html ./build/200.html",
-    "web:deploy": "NODE_ENV=production npm run build && npm run rename && surge -p build -d https://cra-workbox.surge.sh",
+    "web:deploy": "NODE_ENV=production npm run build && npm run rename && surge -p build -d https://awesome-web-apis.surge.sh",
     "server:deploy": "git subtree push --prefix server heroku master",
     "deploy": "npm run web:deploy && npm run server:deploy"
   },

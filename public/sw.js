@@ -86,7 +86,7 @@ self.addEventListener('push', event => {
 
   const title = 'Push notification';
   const options = {
-    body: 'Hey, how are doing?',
+    body: 'Hey, how are you doing?',
     icon: 'images/logo512.png',
     badge: 'images/logo192.png',
     vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
