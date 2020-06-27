@@ -16,6 +16,7 @@ const FullScreen = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen'
 const ScreenNoSleep = RouteLoader(React.lazy(() => import('./pages/apis/NoSleep')))
 const WakeLock = RouteLoader(React.lazy(() => import('./pages/apis/WakeLock')))
 const Notifications = RouteLoader(React.lazy(() => import('./pages/apis/Notifications')))
+const PushNotifications = RouteLoader(React.lazy(() => import('./pages/apis/PushNotifications')))
 const TextFragments = RouteLoader(React.lazy(() => import('./pages/apis/TextFragments')))
 const IdleDetector = RouteLoader(React.lazy(() => import('./pages/apis/IdleDetector')))
 const UserMedia = RouteLoader(React.lazy(() => import('./pages/apis/UserMedia')))
@@ -42,6 +43,7 @@ function App() {
             <Route path='/api/screen-no-sleep' component={ScreenNoSleep} />
             <Route path='/api/wakelock' component={WakeLock} />
             <Route path='/api/notifications' component={Notifications} />
+            <Route path='/api/push-notifications' component={PushNotifications} />
             <Route path='/api/text-fragments' component={TextFragments} />
             <Route path='/api/idle-detector' component={IdleDetector} />
             <Route path='/api/user-media' component={UserMedia} />

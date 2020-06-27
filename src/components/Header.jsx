@@ -21,6 +21,7 @@ const Header = () => {
         <Link to='/api/screen-no-sleep'>Wake lock with NoSleep.js</Link>
         <Link to='/api/wakelock'>WakeLock</Link>
         <Link to='/api/notifications'>Notifications</Link>
+        <Link to='/api/push-notifications'>Push Notifications</Link>
         <Link to='/api/text-fragments'>Text Fragments</Link>
         <Link to='/api/idle-detector'>Idle Detector</Link>
         <Link to='/api/user-media'>User Media</Link>

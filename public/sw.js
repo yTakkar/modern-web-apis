@@ -79,3 +79,54 @@ const navigationHandler = async (params) => {
 workbox.routing.registerRoute(
   new workbox.routing.NavigationRoute(navigationHandler)
 );
+
+self.addEventListener('push', event => {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'Push notification';
+  const options = {
+    body: 'Yay it works.',
+    icon: 'images/icon.png',
+    badge: 'images/badge.png',
+    actions: [
+      {
+        action: 'action-1',
+        title: 'Action 1',
+      },
+      {
+        action: 'action-2',
+        title: 'Action 2',
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(title, options)
+  );
+});
+
+self.addEventListener('notificationclick', e => {
+  if (!e.action) {
+    self.clients.matchAll().then(clientList => {
+      console.log(clientList)
+
+      if (clientList.length > 0) {
+        return clientList[0].focus();
+      }
+    })
+    return;
+  }
+
+  switch (e.action) {
+    case 'action-1':
+      console.log('Action 1 clicked')
+      self.clients.openWindow('https://www.google.com/')
+      break;
+
+    default:
+      console.log('Unknown action')
+      self.clients.openWindow('https://www.espncricinfo.com/')
+      break;
+  }
+})
