@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Back from '../../components/Back'
 
 const Profile = props => {
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [url, setUrl] = useState('')
 
   useEffect(() => {
     window.addEventListener('DOMContentLoaded', () => {
-      const parsedUrl = new URL(window.location);
-      console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
-      console.log('Text shared: ' + parsedUrl.searchParams.get('description'));
-      console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
+      const { searchParams } = new URL(window.location);
+      setTitle(searchParams.get('title'))
+      setDescription(searchParams.get('description'))
+      setUrl(searchParams.get('url'))
     });
   }, [])
 
@@ -17,6 +20,17 @@ const Profile = props => {
       <Back/>
       <h3>Share Target API</h3>
       <div>We can use this API to receive 'shares'</div>
+
+      <br/>
+      {title && (
+        <div>Title shared: {title}</div>
+      )}
+      {description && (
+        <div>Description shared: {description}</div>
+      )}
+      {url && (
+        <div>URL shared: {url}</div>
+      )}
 
     </div>
   )
