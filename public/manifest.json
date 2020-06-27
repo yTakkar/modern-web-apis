@@ -35,7 +35,7 @@
     }
   ],
   "share_target": {
-    "action": "/share-target",
+    "action": "/api/share-target",
     "params": {
       "title": "name",
       "text": "description",
