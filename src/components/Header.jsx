@@ -15,6 +15,7 @@ const Header = () => {
         <h4>Interesting Web APIs</h4>
         <Link to='/api/install' >Install</Link>
         <Link to='/api/share'>Share</Link>
+        <Link to='/api/share-target'>Share Target</Link>
         <Link to='/api/vibrate'>Vibrate</Link>
         <Link to='/api/media-session'>MediaSession</Link>
         <Link to='/api/fullscreen'>FullScreen</Link>

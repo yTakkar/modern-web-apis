@@ -11,6 +11,7 @@ const Profile = RouteLoader(React.lazy(() => import('./pages/others/Profile')))
 const Install = RouteLoader(React.lazy(() => import('./pages/apis/Install')))
 const Battery = RouteLoader(React.lazy(() => import('./pages/apis/Battery')))
 const Share = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
+const ShareTarget = RouteLoader(React.lazy(() => import('./pages/apis/ShareTarget')))
 const Virate = RouteLoader(React.lazy(() => import('./pages/apis/Virate')))
 const MediaSession = RouteLoader(React.lazy(() => import('./pages/apis/MediaSession')))
 const FullScreen = RouteLoader(React.lazy(() => import('./pages/apis/FullScreen')))
@@ -39,6 +40,7 @@ function App() {
 
             <Route path='/api/install' component={Install} />
             <Route path='/api/share' component={Share} />
+            <Route path='/api/share-target' component={ShareTarget} />
             <Route path='/api/vibrate' component={Virate} />
             <Route path='/api/media-session' component={MediaSession} />
             <Route path='/api/fullscreen' component={FullScreen} />
