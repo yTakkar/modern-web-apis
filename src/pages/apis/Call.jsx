@@ -6,7 +6,7 @@ const Call = props => {
     <div>
       <Back/>
 
-      <h3>Call from both desktop and mobile</h3>
+      <h3>Click to Call from both desktop and mobile</h3>
 
       <a href='tel:+918104570640'>Call me?</a>
 
