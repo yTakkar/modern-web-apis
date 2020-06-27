@@ -29,6 +29,7 @@ const Header = () => {
         <Link to='/api/contacts'>Contacts</Link>
         <Link to='/api/clipboard'>Clipboard</Link>
         <Link to='/api/payment-request'>PaymentRequest</Link>
+        <Link to='/api/call'>Call</Link>
       </div>
     </>
   )

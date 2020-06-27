@@ -4,9 +4,9 @@ import RouteLoader from './components/RouteLoader';
 import logo512 from './images/logo512.png'
 import logo192 from './images/logo192.png'
 
-const Home = RouteLoader(React.lazy(() => import('./pages/pages/Home')))
-const About = RouteLoader(React.lazy(() => import('./pages/pages/About')))
-const Profile = RouteLoader(React.lazy(() => import('./pages/pages/Profile')))
+const Home = RouteLoader(React.lazy(() => import('./pages/others/Home')))
+const About = RouteLoader(React.lazy(() => import('./pages/others/About')))
+const Profile = RouteLoader(React.lazy(() => import('./pages/others/Profile')))
 
 const Install = RouteLoader(React.lazy(() => import('./pages/apis/Install')))
 const Share = RouteLoader(React.lazy(() => import('./pages/apis/Share')))
@@ -24,6 +24,7 @@ const ScreenMedia = RouteLoader(React.lazy(() => import('./pages/apis/ScreenMedi
 const Contacts = RouteLoader(React.lazy(() => import('./pages/apis/Contacts')))
 const Clipboard = RouteLoader(React.lazy(() => import('./pages/apis/Clipboard')))
 const PaymentRequest = RouteLoader(React.lazy(() => import('./pages/apis/PaymentRequest')))
+const Call = RouteLoader(React.lazy(() => import('./pages/apis/Call')))
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             <Route path='/api/contacts' component={Contacts} />
             <Route path='/api/clipboard' component={Clipboard} />
             <Route path='/api/payment-request' component={PaymentRequest} />
+            <Route path='/api/call' component={Call} />
             <Route component={Home} />
           </Switch>
         </div>
