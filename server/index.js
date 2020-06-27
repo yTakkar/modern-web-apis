@@ -25,6 +25,8 @@ const triggerPushMsg = function(subscription, dataToSend) {
   });
 };
 
+app.get('/', (req, res) => res.send('Hello from the server :)'))
+
 app.post('/api/save-subscription', async (req, res) => {
   subscriptions.create({ subscription: JSON.stringify(req.body) })
     .then(resp => {

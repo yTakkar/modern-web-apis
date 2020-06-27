@@ -20,7 +20,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "rename": "cp ./build/index.html ./build/200.html",
-    "deploy": "npm run build && npm run rename && surge -p build -d https://cra-workbox.surge.sh"
+    "web:deploy": "npm run build && npm run rename && surge -p build -d https://cra-workbox.surge.sh",
+    "server:deploy": "git subtree push --prefix server heroku master",
+    "deploy": "npm run web:deploy && npm run server:deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
