@@ -7,12 +7,10 @@ const Profile = props => {
   const [url, setUrl] = useState('')
 
   useEffect(() => {
-    window.addEventListener('DOMContentLoaded', () => {
-      const { searchParams } = new URL(window.location);
-      setTitle(searchParams.get('title'))
-      setDescription(searchParams.get('description'))
-      setUrl(searchParams.get('url'))
-    });
+    const { searchParams } = new URL(window.location);
+    setTitle(searchParams.get('title'))
+    setDescription(searchParams.get('description'))
+    setUrl(searchParams.get('url'))
   }, [])
 
   return (
@@ -22,15 +20,10 @@ const Profile = props => {
       <div>We can use this API to receive 'shares'</div>
 
       <br/>
-      {title && (
-        <div>Title shared: {title}</div>
-      )}
-      {description && (
-        <div>Description shared: {description}</div>
-      )}
-      {url && (
-        <div>URL shared: {url}</div>
-      )}
+
+      <div>Title shared: {title}</div>
+      <div>Description shared: {description}</div>
+      <div>URL shared: {url}</div>
 
     </div>
   )

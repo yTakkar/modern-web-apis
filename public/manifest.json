@@ -37,7 +37,7 @@
   "share_target": {
     "action": "/api/share-target",
     "params": {
-      "title": "name",
+      "title": "title",
       "text": "description",
       "url": "url"
     }
