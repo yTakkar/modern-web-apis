@@ -10,6 +10,8 @@ import cookie from 'js-cookie'
 
 const PUBLIC_KEY = 'BBDrHKLJfxVxcNKygxQzENzEb4mUPsuZrffu0EV6Hg_jyU5oR7LdG4bcrjHq7aWA5v8emlZpTMOIG68Wy5s8ofY'
 
+const API_DOMAIN = process.env === 'production' ? 'https://awesome-web-apis-server.herokuapp.com' : 'http://localhost:3001'
+
 const PushNotifications = props => {
   const [errorMessage, setErrorMessage] = useState('')
   const [subscription, setSubscription] = useState(null)
@@ -36,7 +38,7 @@ const PushNotifications = props => {
   }, [])  // eslint-disable-line
 
   const saveSubscription = (subscription) => {
-    fetch('http://localhost:3001/api/save-subscription', {
+    fetch(`${API_DOMAIN}/api/save-subscription`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +68,7 @@ const PushNotifications = props => {
 
   const unsubscribe = () => {
     try {
-      fetch('http://localhost:3001/api/delete-subscription', {
+      fetch(`${API_DOMAIN}/api/delete-subscription`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -91,7 +93,7 @@ const PushNotifications = props => {
   }
 
   const triggerNotification = () => {
-    fetch('http://localhost:3001/api/trigger-push-notification', {
+    fetch(`${API_DOMAIN}/api/trigger-push-notification`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
