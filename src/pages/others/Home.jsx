@@ -9,7 +9,7 @@ const Home = props => {
       <br/>
       <br/>
       <div>
-        <b>Note: Please access the app on a modern mobile browser. I'd suggest using Chrome Canary.</b>
+        <b>Note: Please access the app on a mobile browser and make sure it's modern. I'd suggest using Chrome Canary.</b>
       </div>
     </div>
   )
