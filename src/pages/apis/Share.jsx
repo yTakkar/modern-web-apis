@@ -57,7 +57,7 @@ const ShareApi = props => {
       const file = new File([blob], name, {type: blob.type});
 
       share({
-        url: 'https://cra-workbox.surge.sh/api/share',
+        url: 'https://awesome-web-apis.surge.sh/api/share',
         title,
         files: [file]
       });

@@ -26,6 +26,13 @@ const Contacts = RouteLoader(React.lazy(() => import('./pages/apis/Contacts')))
 const Clipboard = RouteLoader(React.lazy(() => import('./pages/apis/Clipboard')))
 const PaymentRequest = RouteLoader(React.lazy(() => import('./pages/apis/PaymentRequest')))
 const Call = RouteLoader(React.lazy(() => import('./pages/apis/Call')))
+const PageVisibility = RouteLoader(React.lazy(() => import('./pages/apis/PageVisibility')))
+const OnlineState = RouteLoader(React.lazy(() => import('./pages/apis/OnlineState')))
+const NetworkInformation = RouteLoader(React.lazy(() => import('./pages/apis/NetworkInformation')))
+const GeoLocation = RouteLoader(React.lazy(() => import('./pages/apis/GeoLocation')))
+const IntersectionObserver = RouteLoader(React.lazy(() => import('./pages/apis/IntersectionObserver')))
+const DeviceMemory = RouteLoader(React.lazy(() => import('./pages/apis/DeviceMemory')))
+const StorageQuota = RouteLoader(React.lazy(() => import('./pages/apis/StorageQuota')))
 
 function App() {
   return (
@@ -55,6 +62,13 @@ function App() {
             <Route path='/api/payment-request' component={PaymentRequest} />
             <Route path='/api/call' component={Call} />
             <Route path='/api/battery' component={Battery} />
+            <Route path='/api/page-visibility' component={PageVisibility} />
+            <Route path='/api/online-state' component={OnlineState} />
+            <Route path='/api/network-information' component={NetworkInformation} />
+            <Route path='/api/geo-location' component={GeoLocation} />
+            <Route path='/api/intersection-observer' component={IntersectionObserver} />
+            <Route path='/api/device-memory' component={DeviceMemory} />
+            <Route path='/api/storage-quota' component={StorageQuota} />
             <Route component={Home} />
           </Switch>
         </div>
