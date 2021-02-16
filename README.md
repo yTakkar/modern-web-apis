@@ -3,6 +3,3 @@
 
 # API: https://awesome-web-apis-server.herokuapp.com/
 
-# TODO
-- Bluetooth API
-- Web OTP API

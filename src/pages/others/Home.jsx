@@ -13,13 +13,6 @@ const Home = props => {
       </div>
 
       <br/>
-      <div>
-        <h4>#TODO</h4>
-        <ul>
-          <li>Bluetooth API</li>
-          <li>Web OTP API</li>
-        </ul>
-      </div>
     </div>
   )
 }
