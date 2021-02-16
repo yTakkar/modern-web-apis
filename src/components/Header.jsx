@@ -39,6 +39,7 @@ const Header = () => {
         <Link to='/api/device-memory' >Device Memory</Link>
         <Link to='/api/storage-quota' >Storage Quota</Link>
         <Link to='/api/ambient-light-sensor' >Ambient Light Sensor</Link>
+        <Link to='/api/file-read' >File Read</Link>
       </div>
     </>
   )
