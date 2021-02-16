@@ -38,6 +38,7 @@ const Header = () => {
         <Link to='/api/intersection-observer' >Intersection Observer</Link>
         <Link to='/api/device-memory' >Device Memory</Link>
         <Link to='/api/storage-quota' >Storage Quota</Link>
+        <Link to='/api/ambient-light-sensor' >Ambient Light Sensor</Link>
       </div>
     </>
   )

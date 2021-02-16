@@ -33,6 +33,7 @@ const GeoLocation = RouteLoader(React.lazy(() => import('./pages/apis/GeoLocatio
 const IntersectionObserver = RouteLoader(React.lazy(() => import('./pages/apis/IntersectionObserver')))
 const DeviceMemory = RouteLoader(React.lazy(() => import('./pages/apis/DeviceMemory')))
 const StorageQuota = RouteLoader(React.lazy(() => import('./pages/apis/StorageQuota')))
+const AmbientLightSensor = RouteLoader(React.lazy(() => import('./pages/apis/AmbientLightSensor')))
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
             <Route path='/api/intersection-observer' component={IntersectionObserver} />
             <Route path='/api/device-memory' component={DeviceMemory} />
             <Route path='/api/storage-quota' component={StorageQuota} />
+            <Route path='/api/ambient-light-sensor' component={AmbientLightSensor} />
             <Route component={Home} />
           </Switch>
         </div>

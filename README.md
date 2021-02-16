@@ -5,6 +5,5 @@
 
 # TODO
 - File System Access API
-- Ambient Light Sensor API
 - Bluetooth API
 - Web OTP API
