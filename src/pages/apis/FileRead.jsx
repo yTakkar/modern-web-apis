@@ -68,6 +68,7 @@ const FileRead = props => {
         {renderContent()}
       </div>
 
+      <div>{error}</div>
     </div>
   )
 }

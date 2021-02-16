@@ -34,7 +34,7 @@ const StorageQuota = props => {
       {storageInfo.quota ? <div>
         <div>Estimated quota: {formatBytes(storageInfo.quota)}</div>
         <div>Estimated usage: {formatBytes(storageInfo.usage)}</div>
-        <div>Estimated usage in percent: {(storageInfo.usage * 100 / storageInfo.quota).toFixed(2)}%</div>
+        <div>Estimated usage in percent: {(storageInfo.usage * 100 / storageInfo.quota).toFixed(4)}%</div>
       </div> : null}
 
       <div>{error}</div>

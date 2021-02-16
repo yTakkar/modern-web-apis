@@ -40,6 +40,7 @@ const Header = () => {
         <Link to='/api/storage-quota' >Storage Quota</Link>
         <Link to='/api/ambient-light-sensor' >Ambient Light Sensor</Link>
         <Link to='/api/file-read' >File Read</Link>
+        <Link to='/api/file-write' >File Write</Link>
       </div>
     </>
   )

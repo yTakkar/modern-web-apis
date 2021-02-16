@@ -16,7 +16,6 @@ const Home = props => {
       <div>
         <h4>#TODO</h4>
         <ul>
-          <li>File System Access API</li>
           <li>Bluetooth API</li>
           <li>Web OTP API</li>
         </ul>

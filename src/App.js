@@ -35,6 +35,7 @@ const DeviceMemory = RouteLoader(React.lazy(() => import('./pages/apis/DeviceMem
 const StorageQuota = RouteLoader(React.lazy(() => import('./pages/apis/StorageQuota')))
 const AmbientLightSensor = RouteLoader(React.lazy(() => import('./pages/apis/AmbientLightSensor')))
 const FileRead = RouteLoader(React.lazy(() => import('./pages/apis/FileRead')))
+const FileWrite = RouteLoader(React.lazy(() => import('./pages/apis/FileWrite')))
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
             <Route path='/api/storage-quota' component={StorageQuota} />
             <Route path='/api/ambient-light-sensor' component={AmbientLightSensor} />
             <Route path='/api/file-read' component={FileRead} />
+            <Route path='/api/file-write' component={FileWrite} />
             <Route component={Home} />
           </Switch>
         </div>

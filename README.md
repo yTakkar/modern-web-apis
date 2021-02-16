@@ -4,6 +4,5 @@
 # API: https://awesome-web-apis-server.herokuapp.com/
 
 # TODO
-- File System Access API
 - Bluetooth API
 - Web OTP API
